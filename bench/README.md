@@ -54,7 +54,7 @@ fast-json-clone (this package)  x 664 ops/sec ±0.33% (96 runs sampled)
 Fastest is fast-json-clone (this package)
 ```
 
-MIDIUM:
+MEDIUM:
 
 ```
 Naive deep clone               x 377,647 ops/sec ±0.65% (96 runs sampled)

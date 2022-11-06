@@ -38,7 +38,7 @@ cloneJSON(x: JsonValue): JsonValue;
 
 This function clones the given JSON value and returns it. There are some invariants for the parameter:
 
-- The parameter must not contain circles. This function does not detect circles by design.
+- The parameter must not contain circles. This function does not work with circular references by design.
 - The parameter must contain JSON values only. Other values like `Date`, `Regexp`, `Map`, `Set`, `Buffer`, ... are not allowed.
 
 ## Benchmark
@@ -64,13 +64,13 @@ Fastest is fast-json-clone (this package)
 
 ### Why this package is the fastest?
 
-Since this pacakge is optimized for removing function calls in the hot loop as much as possible. [rfdc][] is implemented
-with the same strategy.
+Since this package is optimized for removing non-inline function calls in the hot loop as much as possible. [rfdc][] is
+implemented with the same strategy.
 
 ### Then why this package is faster than rfdc?
 
 Since this package provides less functionality. rfdc provides some extra functionalities such as support for some non-JSON
-types (`Date`, `Regexp`, ...). It increses number of branches and causes some trade-off.
+types (`Date`, `Regexp`, ...). They cause some trade-off.
 
 ## License
 
