@@ -23,6 +23,8 @@
   },
   "include": [
     "index.ts",
-    "test/index.ts"
+    "test/index.ts",
+    "bench/index.ts",
+    "bench/types.d.ts"
   ]
 }

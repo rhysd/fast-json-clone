@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p . -d",
-    "test": "tsc -p . && mocha test"
+    "watch": "tsc -p . -d -w",
+    "test": "tsc -p . && mocha test",
+    "bench": "tsc -p . && node bench/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,20 @@
   },
   "homepage": "https://github.com/rhysd/fast-json-clone#readme",
   "devDependencies": {
+    "@types/benchmark": "^2.1.2",
+    "@types/clone-deep": "^4.0.1",
+    "@types/lodash.clonedeep": "^4.5.7",
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.11.9",
+    "@types/ungap__structured-clone": "^0.3.0",
+    "@ungap/structured-clone": "^1.0.1",
+    "benchmark": "^2.1.4",
+    "clone-deep": "^4.0.1",
+    "fastest-json-copy": "^1.0.1",
+    "lodash.clonedeep": "^4.5.0",
+    "microtime": "^3.1.1",
     "mocha": "^10.1.0",
+    "rfdc": "^1.3.0",
     "typescript": "^4.8.4"
   }
 }

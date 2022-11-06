@@ -1,6 +1,6 @@
 /package-lock.json
 /node_modules
-/*.js
+*.js
 /*.d.ts
-/test/*.js
 /test/*.d.ts
+/bench/index.d.ts
