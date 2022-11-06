@@ -1,5 +1,7 @@
 Fastest™ JSON deep clone in JavaScript
 ======================================
+[![npm][npm-badge]][npm]
+[![CI][ci-badge]][ci]
 
 [fast-json-clone][npm] is a tiny library to clone [JSON][json] values in pure JavaScript focusing on the speed.
 According to [the benchmark](./bench), this package is the fastest among the implementation.
@@ -75,6 +77,9 @@ types (`Date`, `Regexp`, ...). It increses number of branches and causes some tr
 This package is distributed under [CC0 1.0](LICENSE.txt) (Public Domain).
 Feel free to copy and paste the implementation directly to your project without any copyright notice.
 
+[ci]: https://github.com/rhysd/fast-json-clone/actions/workflows/ci.yml
+[ci-badge]: https://github.com/rhysd/fast-json-clone/actions/workflows/ci.yml/badge.svg
 [npm]: https://www.npmjs.com/package/fast-json-clone
+[npm-badge]: https://badge.fury.io/js/fast-json-clone.svg
 [json]: https://json.org/
 [rfdc]: https://github.com/davidmarkclements/rfdc
