@@ -87,7 +87,7 @@ const small = {
         num: 42,
         bool: true,
         null: null,
-    }
+    },
 };
 
 bench('LARGE', large);
