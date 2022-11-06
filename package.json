@@ -1,0 +1,33 @@
+{
+  "name": "fast-json-clone",
+  "version": "0.0.0",
+  "description": "Clone JSON value faster than the fastest",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p . -d",
+    "test": "tsc -p . && mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhysd/fast-json-clone.git"
+  },
+  "keywords": [
+    "JSON",
+    "deepclone",
+    "clone",
+    "deepcopy",
+    "copy"
+  ],
+  "author": "rhysd <lin90162@yahoo.co.jp> (https://rhysd.github.io/)",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/rhysd/fast-json-clone/issues"
+  },
+  "homepage": "https://github.com/rhysd/fast-json-clone#readme",
+  "devDependencies": {
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.11.9",
+    "mocha": "^10.1.0",
+    "typescript": "^4.8.4"
+  }
+}
