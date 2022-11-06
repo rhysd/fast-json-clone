@@ -23,6 +23,9 @@ describe('cloneJSON', function () {
         [1, '', true, null],
         {},
         { num: 1, str: 'a', bool: true, null: null },
+        [[[[]]]],
+        { a: { b: { c: { d: {} } } } },
+        { a: [{ b: [{ c: [{ d: [] }] }] }] },
     ];
 
     for (const param of params) {
