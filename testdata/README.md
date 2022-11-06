@@ -1,0 +1,1 @@
+[`large.json`](large.json) is a `package-lock.json` at [eslint/eslint@c3ce5212f672d95dde3465d7d3c4bf99ff665f8b](https://github.com/eslint/eslint/tree/c3ce5212f672d95dde3465d7d3c4bf99ff665f8b) (31726 lines).

@@ -1,8 +1,17 @@
 import { notStrictEqual as neq, deepStrictEqual as deq } from 'assert';
+import * as path from 'path';
 import cloneJSON from '../index';
 import type { JsonValue } from '../index';
 
-describe('basic', function() {
+function check(data: JsonValue): void {
+    const cloned = cloneJSON(data);
+    if (typeof data === 'object' && data !== null) {
+        neq(cloned, data);
+    }
+    deq(cloned, data);
+}
+
+describe('cloneJSON', function() {
     const params: JsonValue[] = [
         null,
         '',
@@ -17,12 +26,18 @@ describe('basic', function() {
     ];
 
     for (const param of params) {
-        it(`can clone ${JSON.stringify(param)}`, function() {
-            const cloned = cloneJSON(param);
-            if (typeof param === 'object' && param !== null) {
-                neq(cloned, param);
-            }
-            deq(cloned, param);
+        it(`should clone ${JSON.stringify(param)}`, function() {
+            check(param);
         });
     }
+
+    it('should clone package.json', function() {
+        const data = require(path.join(path.dirname(__dirname), 'package.json'));
+        check(data);
+    });
+
+    it('should clone large JSON data', function() {
+        const data = require(path.join(path.dirname(__dirname), 'testdata', 'large.json'));
+        check(data);
+    });
 });
