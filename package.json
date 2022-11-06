@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "description": "Clone JSON value faster than the fastest",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE.txt"
+  ],
   "scripts": {
     "build": "tsc -p . -d",
     "watch": "tsc -p . -d -w",

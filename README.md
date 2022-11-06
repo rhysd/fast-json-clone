@@ -2,6 +2,7 @@ Fastest™ JSON deep clone in JavaScript
 ======================================
 
 [fast-json-clone][npm] is a tiny library to clone [JSON][json] values in pure JavaScript focusing on the speed.
+According to [the benchmark](./bench), this package is the fastest among the implementation.
 
 ```js
 import * as assert from 'assert';
@@ -13,6 +14,16 @@ const cloned = cloneJSON(value);
 assert.notStrictEqual(value, cloned);
 assert.deepStrictEqual(value, cloned);
 };
+```
+
+## Installation
+
+This package is licensed with CC0-1.0. Directly copy [index.ts](./index.ts) to your project.
+
+Or install via [npm](https://npmjs.com/) package manager.
+
+```sh
+npm install --save fast-json-clone
 ```
 
 ## API
@@ -56,8 +67,13 @@ with the same strategy.
 
 ### Then why this package is faster than rfdc?
 
-Since this package provides less functionality. rfdc provides support for some non-JSON types (`Date`, `Regexp`, ...).
-It increses number of branches and causes some trade-off.
+Since this package provides less functionality. rfdc provides some extra functionalities such as support for some non-JSON
+types (`Date`, `Regexp`, ...). It increses number of branches and causes some trade-off.
+
+## License
+
+This package is distributed under [CC0 1.0](LICENSE.txt) (Public Domain).
+Feel free to copy and paste the implementation directly to your project without any copyright notice.
 
 [npm]: https://www.npmjs.com/package/fast-json-clone
 [json]: https://json.org/
