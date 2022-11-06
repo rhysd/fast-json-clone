@@ -4,7 +4,7 @@ Fastest™ JSON deep clone in JavaScript
 [![CI][ci-badge]][ci]
 
 [fast-json-clone][npm] is a tiny library to clone [JSON][json] values in pure JavaScript focusing on the speed.
-According to [the benchmark](./bench), this package is the fastest among the implementation.
+According to [the benchmark](./bench), this package seems the fastest among several deep-clone implementations.
 
 ```js
 import * as assert from 'assert';
@@ -38,12 +38,13 @@ cloneJSON(x: JsonValue): JsonValue;
 
 This function clones the given JSON value and returns it. There are some invariants for the parameter:
 
-- The parameter must not contain circles. This function does not work with circular references by design.
+- The parameter must not contain circles as JSON does not allow it. This function will cause infinite loop for such values by design.
 - The parameter must contain JSON values only. Other values like `Date`, `Regexp`, `Map`, `Set`, `Buffer`, ... are not allowed.
 
 ## Benchmark
 
-Here is the result of [the benchmark](./bench) with large (1.2MB) JSON value. This package is the fastest among the implementations.
+Here is the benchmark result with large (1.2MB) JSON value. This package is the fastest among the implementations. Please see
+[the benchmark directory](./bench) for more details and other results.
 
 ```
 Naive deep clone                x 269 ops/sec ±0.33% (90 runs sampled)
@@ -62,15 +63,15 @@ Fastest is fast-json-clone (this package)
 
 ## FAQ
 
-### Why this package is the fastest?
+### Why is this package the fastest?
 
 Since this package is optimized for removing non-inline function calls in the hot loop as much as possible. [rfdc][] is
 implemented with the same strategy.
 
-### Then why this package is faster than rfdc?
+### Then why is this package faster than rfdc?
 
-Since this package provides less functionality. rfdc provides some extra functionalities such as support for some non-JSON
-types (`Date`, `Regexp`, ...). They cause some trade-off.
+Since this package provides less functionalities. rfdc provides support for some non-JSON types (`Date`, `Regexp`, ...).
+It increases the number of branches in the hot loop so it causes trade-off in performance.
 
 ## License
 
