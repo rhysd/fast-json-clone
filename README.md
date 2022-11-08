@@ -46,6 +46,8 @@ This function clones the given JSON value and returns it. There are some invaria
 Here is the benchmark result with large (1.2MB) JSON value. This package is the fastest among the implementations. Please see
 [the benchmark directory](./bench) for more details and other results.
 
+<img width=889 height=439 src="https://github.com/rhysd/ss/blob/master/fast-json-clone/perf.png?raw=true" alt="performance">
+
 ```
 Naive deep clone                x 269 ops/sec ±0.33% (90 runs sampled)
 JSON serialize/deserialize      x 144 ops/sec ±0.97% (82 runs sampled)
