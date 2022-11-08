@@ -1,6 +1,6 @@
 {
   "name": "fast-json-clone",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Clone JSON value faster than the fastest",
   "main": "index.js",
   "files": [
