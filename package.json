@@ -10,8 +10,8 @@
     "LICENSE.txt"
   ],
   "scripts": {
-    "build": "tsc -p . -d",
-    "watch": "tsc -p . -d -w",
+    "build": "tsc -p .",
+    "watch": "tsc -p . -w",
     "test": "tsc -p . && mocha test",
     "bench": "tsc -p . && node bench/index.js",
     "prettier": "prettier -w '**/*.ts'",
