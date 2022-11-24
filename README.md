@@ -13,9 +13,11 @@ import cloneJSON from 'fast-json-clone';
 const value = { str: 'hello', num: 42, array: [true, null], object: { str: 'hello', bool: true, } };
 
 const cloned = cloneJSON(value);
-assert.notStrictEqual(value, cloned);
+
 assert.deepStrictEqual(value, cloned);
-};
+assert.notStrictEqual(value, cloned);
+assert.notStrictEqual(value.array, cloned.array);
+assert.notStrictEqual(value.object, cloned.object);
 ```
 
 ## Installation
