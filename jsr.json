@@ -1,0 +1,9 @@
+{
+  "name": "@rhy/fast-json-clone",
+  "version": "1.0.1",
+  "exports": "./index.ts",
+  "exclude": ["**"],
+  "include": [
+    "index.ts"
+  ]
+}
