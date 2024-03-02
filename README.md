@@ -22,12 +22,28 @@ assert.notStrictEqual(value.object, cloned.object);
 
 ## Installation
 
+### Copy the source directly
+
 This package is licensed with CC0-1.0. Directly copy [index.ts](./index.ts) to your project.
 
-Or install via [npm](https://npmjs.com/) package manager.
+### npm
+
+Install via [npm](https://npmjs.com/) package manager.
 
 ```sh
 npm install --save fast-json-clone
+```
+
+### jsr
+
+Install via [JSR](https://jsr.io/) package registry.
+
+```sh
+# npm
+npx jsr add @rhy/fast-json-clone
+
+# deno
+deno add @rhy/fast-json-clone
 ```
 
 ## API
