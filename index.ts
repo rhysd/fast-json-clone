@@ -11,7 +11,7 @@
 export type JsonValue = number | string | boolean | null | JsonValue[] | { [key: string]: JsonValue };
 
 /**
- * This function clones the given JSON value. There are some invariants for the parameter:
+ * This function clones the given JSON value.
  *
  * @param value The JSON value to be cloned. There are two invariants. 1) It must not contain circles
  *              as JSON does not allow it. This function will cause infinite loop for such values by
